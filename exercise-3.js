@@ -29,10 +29,27 @@ houseForSale.set("value", 320000);
 houseForSale.set("streetName", "Ffith Street");
 houseForSale.set("built", "2012");
 houseForSale.set("owner", { name: "Blake", age: 29 });
-houseForSale.set("offers", [290000, 295000, 315000, 312000]);
+houseForSale.set("offers", [290000, 295000, 315000, 312000, 9000000]);
 
-console.log(houseForSale)
+console.log(houseForSale);
 
-houseForSale.delete('built')
+houseForSale.delete("built");
 
-console.log(houseForSale)
+houseForSale.get("owner").age = 40;
+
+let maximum = houseForSale.get("offers").reduce((max, price) => {
+  // this isn't adding just so we're clear, this is checking if the price is greater than the max number we have.
+  // so if the price is ever greater than the max then we send the price back to our counter in our second parameter.
+  // if the max number we've counted however is larger than the price then we return the max number.
+  // remeber the reduce method ONLY returns a single value.
+  if (max < price) {
+    return price;
+  }
+  return max;
+}, 0);
+
+console.log(maximum);
+
+houseForSale.set("sale price", maximum);
+
+console.log(houseForSale);
