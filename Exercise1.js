@@ -20,3 +20,27 @@
 
     8. Print out "myPet" to the terminal again
 */
+
+const myPet = new Map()
+
+myPet.set("name", "Sudo")
+myPet.set("type", "Sudo")
+myPet.set("breed", "poodle")
+myPet.set("age", 7)
+myPet.set("friends", ["Bit", "Byte", "Data"])
+
+console.log(myPet)
+
+myPet.set("color", "black")
+myPet.set("breed","Beagle")
+// How to remove an item using Map()
+// get returns the value of the key you selected
+// myPet.get("freinds") === ["Bit", "Byte", "Data"]
+// sooo.... ["Bit", "Byte", "Data"].pop() will give you ["Bit", "Byte"]
+myPet.get("friends").pop()
+
+console.log(myPet)
+
+myPet.get("friends").push("Chip")
+
+console.log(myPet)
