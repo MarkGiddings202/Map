@@ -40,7 +40,7 @@ myPet.set("breed","Beagle")
 myPet.get("friends").pop()
 
 console.log(myPet)
-
+// its really important to keep in mind what the computer is reading in this editors without a console log. 
 myPet.get("friends").push("Chip")
 
 console.log(myPet)
