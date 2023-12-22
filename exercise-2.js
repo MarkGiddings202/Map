@@ -25,6 +25,7 @@
 
     9. Print out both "store" and "candy"
 */
+
 const banana = { name: "banana", quantity: 1, price: 1.95 };
 const apple = { name: "apple", quantity: 1, price: 1.45 };
 const candy = { name: "candy", quantity: 1, price: 3.5 };
